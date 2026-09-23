@@ -31,9 +31,3 @@ IoT Assist helps users diagnose and resolve common smart device problems through
 - Node.js 18 or later
 - npm
 
-### Installation
-
-```bash
-git clone <your-repository-url>
-cd iot-assist
-npm install
