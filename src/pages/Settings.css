@@ -1,0 +1,136 @@
+.settings-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.settings-card { }
+
+.settings-card--danger { border-color: #f5c6c6; }
+[data-theme="dark"] .settings-card--danger { border-color: #7a0000; }
+
+.settings-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ---- Row with toggle ---- */
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.settings-row-info { flex: 1; }
+.settings-row-label { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); }
+.settings-row-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+
+/* ---- Toggle button ---- */
+.settings-toggle-btn {
+  padding: 8px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.settings-toggle-btn:hover { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+
+/* ---- Switch ---- */
+.settings-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.settings-switch input { display: none; }
+.settings-switch-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--border);
+  border-radius: 99px;
+  transition: background 0.2s;
+}
+.settings-switch-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.settings-switch input:checked + .settings-switch-slider { background: var(--primary); }
+.settings-switch input:checked + .settings-switch-slider::before { transform: translateX(20px); }
+
+/* ---- AI style options ---- */
+.ai-style-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ai-style-option {
+  padding: 7px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--bg-secondary);
+}
+.ai-style-option:hover { border-color: var(--primary); color: var(--primary); }
+.ai-style-option.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ---- Note ---- */
+.settings-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  background: var(--bg-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+/* ---- Confirm row ---- */
+.settings-confirm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* ---- Save row ---- */
+.settings-save-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 680px;
+}
+.settings-saved-msg {
+  font-size: 0.88rem;
+  color: var(--success);
+  font-weight: 600;
+}

@@ -1,0 +1,95 @@
+.dash-welcome {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.dash-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.dash-card-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
+
+/* ---- Recent list ---- */
+.recent-list { display: flex; flex-direction: column; gap: 10px; }
+.recent-preview { opacity: 0.6; pointer-events: none; }
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.recent-item-icon {
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.recent-item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.recent-item-device { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
+.recent-item-problem { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---- Popular list ---- */
+.popular-list { display: flex; flex-direction: column; gap: 10px; }
+
+.popular-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.popular-item:last-child { border-bottom: none; }
+
+.popular-icon { font-size: 1.2rem; }
+.popular-info { flex: 1; display: flex; flex-direction: column; }
+.popular-issue { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
+.popular-devices { font-size: 0.78rem; color: var(--text-muted); }
+
+/* ---- Architecture ---- */
+.dash-arch { margin-bottom: 24px; }
+.arch-flow { padding: 16px 0; }
+
+/* ---- Empty ---- */
+.dash-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 800px) {
+  .dash-main-grid { grid-template-columns: 1fr; }
+}

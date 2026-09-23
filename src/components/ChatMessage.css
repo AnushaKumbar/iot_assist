@@ -1,0 +1,175 @@
+.chat-msg {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.chat-msg--user {
+  flex-direction: row-reverse;
+}
+
+.chat-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.chat-avatar--ai { background: var(--primary-light); }
+.chat-avatar--user { background: var(--bg-tertiary); }
+
+.chat-bubble {
+  max-width: 72%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  position: relative;
+}
+.chat-bubble--ai {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-top-left-radius: 4px;
+}
+.chat-bubble--user {
+  background: var(--primary);
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+.chat-bubble--user .chat-time { color: rgba(255,255,255,0.7); }
+
+.chat-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.chat-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+/* ---- Diagnosis card ---- */
+.diagnosis-card {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.diag-section {
+  padding: 14px 16px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+.diag-section:last-of-type { border-bottom: none; }
+
+.diag-section--blue { background: #eff6ff; }
+[data-theme="dark"] .diag-section--blue { background: #1a254d; }
+.diag-section--green { background: #f0fdf4; }
+[data-theme="dark"] .diag-section--green { background: #0a2918; }
+.diag-section--yellow { background: #fffbeb; }
+[data-theme="dark"] .diag-section--yellow { background: #2d2000; }
+.diag-section--purple { background: #faf5ff; }
+[data-theme="dark"] .diag-section--purple { background: #1a1030; }
+
+.diag-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.diag-icon { font-size: 1rem; }
+.diag-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.diag-text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.diag-issue-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: rgba(59,91,219,0.08);
+  border-radius: var(--radius-sm);
+}
+.diag-issue-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+.diag-issue-value { font-size: 0.88rem; font-weight: 600; color: var(--primary); }
+
+.diag-list, .diag-steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.diag-list li, .diag-steps li {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+.diag-steps { padding-left: 24px; }
+.diag-steps li { counter-increment: step; }
+
+/* ---- Source cards ---- */
+.source-cards { display: flex; flex-direction: column; gap: 8px; }
+
+.source-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.source-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.source-title {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.source-relevance {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--success);
+  white-space: nowrap;
+}
+
+.source-excerpt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .chat-bubble { max-width: 90%; }
+  .diagnosis-card { max-width: 100%; }
+}

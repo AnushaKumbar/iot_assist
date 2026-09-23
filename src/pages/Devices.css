@@ -1,0 +1,26 @@
+.devices-search-row { margin-bottom: 14px; }
+.devices-search { max-width: 400px; }
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.devices-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+  font-size: 0.92rem;
+}
+
+.custom-device-card {
+  margin-top: 32px;
+  background: var(--bg-secondary);
+}
+.custom-device-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary); }
+.custom-device-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px; }
+.custom-device-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.custom-device-row .input-field { flex: 1; min-width: 200px; }

@@ -1,0 +1,41 @@
+.dash-topbar {
+  height: var(--navbar-height);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.dash-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+}
+.dash-menu-btn:hover { background: var(--bg-tertiary); }
+
+.dash-topbar-right { display: flex; align-items: center; gap: 12px; }
+
+.dash-user-badge {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 5px 12px;
+  background: var(--bg-tertiary);
+  border-radius: 99px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .dash-menu-btn { display: block; }
+  .dash-topbar { padding: 0 16px; }
+}
